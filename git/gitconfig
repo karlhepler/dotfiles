@@ -1,0 +1,12 @@
+[user]
+        name = Karl Hepler
+        email = karl.hepler@gmail.com
+[core]
+        editor = vim
+        excludesfile = ~/.gitignore
+[diff]
+        tool = vimdiff
+[merge]
+        tool = vimdiff
+[difftool]
+        prompt = false
