@@ -35,12 +35,24 @@ xcode-select --install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Replace default configs with symlinks
-rm -rf $HOME/.config/karabiner && ln -s $DOTFILES/karabiner $HOME/.config/karabiner && launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server
-rm -f $HOME/{.zshenv,.zprofile,.zshrc,.zlogin,.zlogout} && ln -s $DOTFILES/zsh/zshenv $HOME/.zshenv && ln -s $DOTFILES/zsh/zprofile $HOME/.zprofile && ln -s $DOTFILES/zsh/zshrc $HOME/.zshrc && ln -s $DOTFILES/zsh/zlogin $HOME/.zlogin && ln -s $DOTFILES/zsh/zlogout $HOME/.zlogout
+rm -rf $HOME/.config/karabiner \
+    && ln -s $DOTFILES/karabiner $HOME/.config/karabiner \
+    && launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server
+rm -f $HOME/{.zshenv,.zprofile,.zshrc,.zlogin,.zlogout} \
+    && ln -s $DOTFILES/zsh/zshenv $HOME/.zshenv \
+    && ln -s $DOTFILES/zsh/zprofile $HOME/.zprofile \
+    && ln -s $DOTFILES/zsh/zshrc $HOME/.zshrc \
+    && ln -s $DOTFILES/zsh/zlogin $HOME/.zlogin \
+    && ln -s $DOTFILES/zsh/zlogout $HOME/.zlogout
 rm -rf $HOME/.vim && ln -s $DOTFILES/vim $HOME/.vim
 rm -f $HOME/.gitignore && ln -s $DOTFILES/git/gitignore $HOME/.gitignore
 rm -f $HOME/.gitconfig && ln -s $DOTFILES/git/gitconfig $HOME/.gitconfig
+rm -f $HOME/.iterm2 \
+    && ln -s $DOTFILES/iterm2 $HOME/.iterm2 \
+    && defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string $HOME/.iterm2 \
+    && defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true \
+    && killall cfprefsd
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# Set fast keyboard input rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
