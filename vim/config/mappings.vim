@@ -37,37 +37,31 @@ vnoremap <C-U> 5k5<C-Y>
 inoremap <C-J> <ESC>A<CR><ESC>cc
 
 " QUICKFIX MAPPINGS
-nnoremap <Up> :copen<CR>
-nnoremap <Down> :cclose<CR>
-nnoremap <Left> :cprevious<CR>
-nnoremap <Right> :cnext<CR>
+nmap <Up> <ESC>:copen<CR>
+nmap <Down> <ESC>:cclose<CR>
+nmap <Left> <ESC>:cprevious<CR>
+nmap <Right> <ESC>:cnext<CR>
 
 " FZF - FILES
-nnoremap <C-P> :Files<CR>
-inoremap <C-P> <ESC>:Files<CR>
-vnoremap <C-P> <ESC>:Files<CR>
+map <C-P> <ESC>:Files<CR>
 
 " FZF - BUFFERS
-nnoremap <LEADER>b :Buffers<CR>
-inoremap <LEADER>b <ESC>:Buffers<CR>
-vnoremap <LEADER>b <ESC>:Buffers<CR>
+map <LEADER>b <ESC>:Buffers<CR>
 
 " FZF - BUFFER TAG LIST
-nnoremap <C-B> :BTags<CR>
-inoremap <C-B> <ESC>:BTags<CR>
-vnoremap <C-B> <ESC>:BTags<CR>
+map <C-B> <ESC>:BTags<CR>
 
 " SAVE SESSION
-noremap <silent> <LEADER>ss <ESC>:mks! /tmp/session.vim<CR>
+nmap <silent> <LEADER>ss <ESC>:mks! /tmp/session.vim<CR>
 " LOAD SESSION
-noremap <silent> <LEADER>sl <ESC>:source /tmp/session.vim<CR>
+nmap <silent> <LEADER>sl <ESC>:source /tmp/session.vim<CR>
 
 " Copy relative & absolute paths to system clipboard
-nnoremap <silent> <LEADER>cf :let @+ = expand("%")<CR>
-nnoremap <silent> <LEADER>cF :let @+ = expand("%:p")<CR>
+nmap <silent> <LEADER>cf :let @+ = expand("%")<CR>
+nmap <silent> <LEADER>cF :let @+ = expand("%:p")<CR>
 
 " Horizontal center to cursor position
 nnoremap <silent> zm zszH
 
 " Search with backslash
-nnoremap \ :Rg 
+nmap \ :Rg 

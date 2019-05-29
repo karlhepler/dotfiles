@@ -15,7 +15,7 @@ set autoindent
 
 " COLOR THEME
 set background=dark
-colorscheme palenight
+silent! colorscheme palenight
 
 " USE 256/TRUE COLORS IN TERMINAL
 set termguicolors
@@ -54,12 +54,6 @@ set smartcase
 " DON'T HIGHLIGHT CURRENT LINE (SPEED IMPROVEMENT)
 set nocursorline
 
-" GO AHEAD AND ENABLE MOUSE SUPPORT. FINE.
-set mouse=a
-
-" ENABLE OMNIFUNC SYNTAX COMPLETION
-set omnifunc=syntaxcomplete#Complete
-
 " MAKE BACKSPACE WORK... WHY?
 set backspace=2
 
@@ -80,10 +74,6 @@ set ttimeoutlen=50
 "a better menu in command mode
 set wildmenu
 set wildmode=longest:full,full
-
-" Hide buffers instead of closing them,
-" even if they contain unwritten changes
-set hidden
 
 " Better insert mode completions
 set completeopt=longest,menuone,preview

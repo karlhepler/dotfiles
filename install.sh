@@ -44,7 +44,9 @@ rm -f $HOME/{.zshenv,.zprofile,.zshrc,.zlogin,.zlogout} \
     && ln -s $DOTFILES/zsh/zshrc $HOME/.zshrc \
     && ln -s $DOTFILES/zsh/zlogin $HOME/.zlogin \
     && ln -s $DOTFILES/zsh/zlogout $HOME/.zlogout
-rm -rf $HOME/.vim && ln -s $DOTFILES/vim $HOME/.vim
+rm -rf $HOME/.vim \
+    && ln -s $DOTFILES/vim $HOME/.vim \
+    && vim +PlugInstall +qall
 rm -f $HOME/.gitignore && ln -s $DOTFILES/git/gitignore $HOME/.gitignore
 rm -f $HOME/.gitconfig && ln -s $DOTFILES/git/gitconfig $HOME/.gitconfig
 rm -f $HOME/.iterm2 \
