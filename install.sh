@@ -19,8 +19,7 @@ xcode-select --install
 	ripgrep \
 	fzf \
 	vim \
-	go \
-	nvm
+	go
 
 # Install GUI formulae
 /usr/local/bin/brew cask install \

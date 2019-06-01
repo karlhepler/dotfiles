@@ -40,9 +40,6 @@ set textwidth=0
 set wrapmargin=0
 set formatoptions-=t
 
-" SHOW THE RULER
-set ruler
-
 " ENABLE SEARCH HIGHLIGHTING WHILE TYPING
 set hlsearch
 set incsearch
@@ -53,6 +50,9 @@ set smartcase
 
 " DON'T HIGHLIGHT CURRENT LINE (SPEED IMPROVEMENT)
 set nocursorline
+
+" ENABLE MOUSE
+set mouse=a
 
 " MAKE BACKSPACE WORK... WHY?
 set backspace=2
@@ -83,3 +83,6 @@ set signcolumn=yes
 
 " Tame horizontal scroll
 set sidescroll=1
+
+" Don't redraw screen while executing macros
+set lazyredraw

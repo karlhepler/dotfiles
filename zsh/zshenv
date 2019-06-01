@@ -1,0 +1,2 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.composer/vendor/bin:$HOME/go/bin
+export ZSH="/Users/brewer/.oh-my-zsh"

@@ -18,7 +18,7 @@ nnoremap ,<CR> A,<CR>
 
 " INSERT AND FIND TODO(KJH)
 inoremap <LEADER>t TODO(kjh):<SPACE>
-nnoremap <silent> <LEADER>t :Ack TODO\(kjh\)<CR>
+nnoremap <silent> <LEADER>t :Rg TODO<CR>
 
 " Highlight word without jump in normal mode
 nnoremap * :keepjumps normal! mi*`i<CR>
@@ -42,6 +42,10 @@ nmap <Down> <ESC>:cclose<CR>
 nmap <Left> <ESC>:cprevious<CR>
 nmap <Right> <ESC>:cnext<CR>
 
+" SWITCH BUFFERS
+nmap <S-Left> <ESC>:bp<CR>
+nmap <S-Right> <ESC>:bn<CR>
+
 " FZF - FILES
 map <C-P> <ESC>:Files<CR>
 
@@ -56,12 +60,15 @@ nmap <silent> <LEADER>ss <ESC>:mks! /tmp/session.vim<CR>
 " LOAD SESSION
 nmap <silent> <LEADER>sl <ESC>:source /tmp/session.vim<CR>
 
-" Copy relative & absolute paths to system clipboard
+" COPY RELATIVE & ABSOLUTE PATHS TO SYSTEM CLIPBOARD
 nmap <silent> <LEADER>cf :let @+ = expand("%")<CR>
 nmap <silent> <LEADER>cF :let @+ = expand("%:p")<CR>
 
-" Horizontal center to cursor position
+" HORIZONTAL CENTER TO CURSOR POSITION
 nnoremap <silent> zm zszH
 
-" Search with backslash
+" SEARCH WITH BACKSLASH
 nmap \ :Rg 
+
+" MAKE Y COPY TO THE END
+nnoremap Y yg_
